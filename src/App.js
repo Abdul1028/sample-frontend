@@ -61,7 +61,6 @@ const mockUsers = [
 function App() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [usingMockData, setUsingMockData] = useState(false);
 
   useEffect(() => {
@@ -78,7 +77,7 @@ function App() {
         setLoading(false);
       })
       .catch(err => {
-        console.log('API fetch failed, using mock data:', err.message);
+        console.error('API fetch failed, using mock data:', err.message);
         // Use mock data as fallback
         setUsers(mockUsers);
         setUsingMockData(true);
@@ -88,10 +87,6 @@ function App() {
 
   if (loading) {
     return <div className="loading">Loading...</div>;
-  }
-
-  if (error) {
-    return <div className="error">Error: {error}</div>;
   }
 
   return (
