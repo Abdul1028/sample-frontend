@@ -113,13 +113,13 @@ function App() {
               <p><strong>Website:</strong> {user.website}</p>
               <div className="user-address">
                 <strong>Address:</strong>
-                <p>{user.address.street}, {user.address.suite}</p>
-                <p>{user.address.city}, {user.address.zipcode}</p>
+                <p>{user.address?.street}, {user.address?.suite}</p>
+                <p>{user.address?.city}, {user.address?.zipcode}</p>
               </div>
               <div className="user-company">
                 <strong>Company:</strong>
-                <p>{user.company.name}</p>
-                <p className="company-catchphrase">{user.company.catchPhrase}</p>
+                <p>{user.company?.name}</p>
+                <p className="company-catchphrase">{user.company?.catchPhrase}</p>
               </div>
             </div>
           ))}
