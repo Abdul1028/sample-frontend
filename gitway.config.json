@@ -1,5 +1,5 @@
 {
   "buildCommd": "npm run build:production",
-  "installCommand": "npm ci",
+  "InstallCommand": "npm ci",
   "outputDirectory": "build"
 }
